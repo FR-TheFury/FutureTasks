@@ -1,0 +1,132 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Exo+2:wght@300;400;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 230 50% 7%;
+    --foreground: 210 40% 98%;
+
+    --card: 230 40% 10%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 230 45% 11%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 199 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 270 60% 52%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 230 30% 20%;
+    --muted-foreground: 210 30% 70%;
+
+    --accent: 180 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 30% 15%;
+    --input: 230 30% 15%;
+    --ring: 240 60% 52%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 230 50% 7%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 240 60% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 30% 15%;
+    --sidebar-accent-foreground: 240 40% 98%;
+    --sidebar-border: 240 30% 15%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    --background: 210 40% 98%;
+    --foreground: 230 50% 10%;
+
+    --card: 210 40% 96%;
+    --card-foreground: 230 50% 10%;
+
+    --popover: 210 40% 96%;
+    --popover-foreground: 230 50% 10%;
+
+    --primary: 199 100% 45%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 270 60% 52%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 30% 90%;
+    --muted-foreground: 230 30% 40%;
+
+    --accent: 180 100% 45%;
+    --accent-foreground: 230 50% 10%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 30% 85%;
+    --input: 230 30% 85%;
+    --ring: 240 60% 52%;
+
+    --sidebar-background: 210 40% 98%;
+    --sidebar-foreground: 230 50% 10%;
+    --sidebar-primary: 240 60% 52%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 30% 90%;
+    --sidebar-accent-foreground: 240 40% 10%;
+    --sidebar-border: 240 30% 85%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Exo 2', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo 2', sans-serif;
+    @apply font-semibold;
+  }
+  
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  .glass-panel {
+    @apply bg-black/30 backdrop-blur-md border border-white/10 rounded-xl shadow-lg;
+  }
+  
+  .neon-border {
+    @apply border border-futuristic-neon shadow-[0_0_10px_rgba(0,255,234,0.6)];
+  }
+  
+  .futuristic-card {
+    @apply glass-panel p-6 relative overflow-hidden;
+  }
+  
+  .futuristic-card::before {
+    content: "";
+    @apply absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-futuristic-neon to-transparent;
+  }
+  
+  .futuristic-input {
+    @apply bg-black/40 border-none rounded-md py-2 px-4 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-futuristic-blue;
+  }
+}
