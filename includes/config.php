@@ -2,9 +2,9 @@
 <?php
 // Configuration de la base de données
 $db_host = 'localhost';
-$db_name = 'futuretasks';
-$db_user = 'root';
-$db_pass = '';
+$db_name = 'futuretasks_final';
+$db_user = 'Projet';
+$db_pass = 'Test.1234';
 
 try {
     $pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
@@ -15,7 +15,7 @@ try {
 }
 
 // Constantes de l'application
-define('SITE_NAME', 'FutureTasks');
+define('SITE_NAME', 'futuretasks_final');
 define('APP_VERSION', '1.0.0');
 
 // Accès selon les rôles

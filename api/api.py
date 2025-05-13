@@ -18,13 +18,13 @@ app.config['JSONIFY_PRETTYPRINT_REGULAR'] = True
 db_config = {
     'company': {
         'host': 'localhost',
-        'database': 'futuretasks',
+        'database': 'futuretasks_final',
         'user': 'Projet',
         'password': 'Test.1234'
     },
     'partner': {
         'host': 'localhost',
-        'database': 'partner_tasks',
+        'database': 'futuretasks_partner_final',
         'user': 'Projet',
         'password': 'Test.1234'
     }
